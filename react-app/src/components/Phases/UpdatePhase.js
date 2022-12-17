@@ -15,7 +15,7 @@ const UpdatedPhase = ({phaseId, phaseTitle, projectId, ownerId}) => {
   }
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    // e.preventDefault()
     setErrors([])
     const phase = { title, projectId, ownerId }
     const response = await dispatch(thunkUpdatePhase(phaseId, phase))

@@ -28,7 +28,7 @@ const DeleteIssue = ({issueId, phaseId}) => {
   // }, [showMenu])
 
   const handleIssueDelete = async (e) => {
-    e.stopPropagation()
+    // e.stopPropagation()
     if (window.confirm("Are you sure you want to delete this Issue?")) {
       // console.log("DELETE ISSUE---issueId:", typeof issueId)
       let response = await dispatch(thunkDeleteIssue(issueId, phaseId))

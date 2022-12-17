@@ -49,7 +49,7 @@ const UpdateIssue = () => {
   }
 
   const handleSummary = async (e) => {
-    e.preventDefault()
+    // e.preventDefault()
     setErrors([])
     const issue = {
       summary,
@@ -72,7 +72,7 @@ const UpdateIssue = () => {
   }
 
   const handleDescription = async (e) => {
-    e.preventDefault()
+    // e.preventDefault()
     const issue = {
       summary: currSummary,
       description,
@@ -96,7 +96,7 @@ const UpdateIssue = () => {
   // let phaseNameOnStage = currIssue.Phase?.title
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    // e.preventDefault()
     const issue = {
       summary: currSummary,
       description: currDescription,

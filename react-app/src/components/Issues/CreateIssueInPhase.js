@@ -14,7 +14,7 @@ const CreateIssueInPhase = ({phaseId, assigneeId}) => {
   }
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    // e.preventDefault()
     setErrors([])
     const issueInfo = {
       summary,

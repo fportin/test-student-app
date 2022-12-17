@@ -44,7 +44,7 @@ const LoginForm = () => {
   }
 
   const DemoUser = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     setErrors([]);
     const demoEmail = "yasha@gmail.com";
     const demoPassword = "password";

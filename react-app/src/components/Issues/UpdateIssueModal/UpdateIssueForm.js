@@ -57,8 +57,8 @@ const UpdateIssueForm = ({currIssue, currPhase}) => {
   }
 
   const handleSummary = async (e) => {
-    e.stopPropagation()
-    e.preventDefault()
+    // e.stopPropagation()
+    // e.preventDefault()
     setSummaryErrors([])
 
     const issue = {
@@ -84,8 +84,8 @@ const UpdateIssueForm = ({currIssue, currPhase}) => {
   }
 
   const handleAttachment = async(e) => {
-    e.stopPropagation()
-    e.preventDefault()
+    // e.stopPropagation()
+    // e.preventDefault()
     setAttachErrors([])
     // console.log("update-issue-upload-attachment__currIssue.summary/attachment", currIssue.summary, attachment)
 
@@ -121,8 +121,8 @@ const UpdateIssueForm = ({currIssue, currPhase}) => {
 
 
   const handleDescription = async (e) => {
-    e.stopPropagation()
-    e.preventDefault()
+    // e.stopPropagation()
+    // e.preventDefault()
     setDescriptionErrors([])
     setSummaryInput(false)
     const issue = {
@@ -147,8 +147,8 @@ const UpdateIssueForm = ({currIssue, currPhase}) => {
   }
 
   const handleAssigneeId = async (e) => {
-    e.stopPropagation()
-    e.preventDefault()
+    // e.stopPropagation()
+    // e.preventDefault()
     setAssigneeId(e.target.value)
     setDescriptionInput(false)
     setSummaryInput(false)
@@ -163,8 +163,8 @@ const UpdateIssueForm = ({currIssue, currPhase}) => {
   }
 
   const handlePhaseId = async (e) => {
-    e.stopPropagation()
-    e.preventDefault()
+    // e.stopPropagation()
+    // e.preventDefault()
     setDescriptionInput(false)
     setSummaryInput(false)
     const issue = {

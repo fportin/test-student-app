@@ -30,8 +30,8 @@ const CreateIssue = ({setModal}) => {
 
   const handleSubmit = async(e) => {
     console.log("!!!!!!!!!!")
-    e.stopPropagation()
-    e.preventDefault()
+    // e.stopPropagation()
+    // e.preventDefault()
     setErrors([])
     // const issueInfo = { summary, description, phaseId, assigneeId }
     console.log("CREATEISSUE FORM-summary, description, phaseId, attachment:", summary, description, phaseId, assigneeId, attachment)
@@ -91,12 +91,12 @@ const CreateIssue = ({setModal}) => {
 
 
   const handleCancel = async(e) => {
-    e.preventDefault()
+    // e.preventDefault()
     setModal(false)
   }
 
   const updateAttachment = (e) => {
-    e.stopPropagation()
+    // e.stopPropagation()
     const file = e.target.files[0];
     setAttachment(file);
   }
@@ -186,6 +186,7 @@ const CreateIssue = ({setModal}) => {
 
       <div>
         <input
+          id="file-upload"
           type="file"
           accept="image/*"
           onChange={updateAttachment}

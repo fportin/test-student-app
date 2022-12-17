@@ -31,7 +31,7 @@ const CreateIssuePage = () => {
   if (!allPhases) return null;
 
   const handleSubmit = async(e) => {
-    e.preventDefault()
+    // e.preventDefault()
     setErrors([])
     const formData = new FormData()
     formData.append("summary", summary)

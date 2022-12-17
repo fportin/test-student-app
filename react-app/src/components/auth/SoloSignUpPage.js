@@ -24,7 +24,7 @@ const SoloSignUpPage = () => {
   }, [email, password, repeatPassword])
 
   const onSignUp = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     if (errors.length > 0) {
       return
     }

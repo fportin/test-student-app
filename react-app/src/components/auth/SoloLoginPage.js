@@ -13,7 +13,7 @@ const SoloLoginPage = () => {
   const dispatch = useDispatch();
 
   const onLogin = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     // console.log("ReactLoginForm_email_password:", email, password)
     const data = await dispatch(login(email, password));
     if (data) {
@@ -34,7 +34,7 @@ const SoloLoginPage = () => {
   }
 
   const DemoUser = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     setErrors([]);
     const demoEmail = "yasha@gmail.com";
     const demoPassword = "password";
