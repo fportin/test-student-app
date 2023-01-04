@@ -6,7 +6,8 @@ def seed_stocks():
     with open(f'{os.path.dirname(__file__)}/stocks_list.csv', 'r') as csv_file:
         for row in csv_file.readlines()[1:]:
             stock_symbol, company_name = row.split(',')[:2]
-            db.session.add(Stock(stock_symbol=stock_symbol, company_name=company_name))
+            company = company_name.split('\\')[0]
+            db.session.add(Stock(stock_symbol=stock_symbol, company_name=company))
 
     db.session.commit()
 # def seed_stocks():
