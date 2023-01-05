@@ -29,7 +29,7 @@ def get_stock(stock_symbol):
     'sector': ticker.info['sector'],
     'marketCap': ticker.info['marketCap'],
     'priceEarningsRatio': format(round(pe_ratio, 2), '.2f'),
-    'dividendYield': format(round(dividend_yield*100, 2), '.2f') if dividend_yield is not 0 else '-',
+    'dividendYield': format(round(dividend_yield*100, 2), '.2f') if dividend_yield is None else '-',
     'averageVolume': ticker.info['averageVolume'],
     'highToday': ticker.info['dayHigh'],
     'lowToday': ticker.info['dayLow'],
