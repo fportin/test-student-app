@@ -7,8 +7,9 @@ def seed_stocks():
         for row in csv_file.readlines()[1:]:
             stock_symbol, company_name = row.split(',')[:2]
             company = company_name.strip()
+            stock = Stock(stock_symbol=stock_symbol, company_name=company)
             # print("SEEDS____________________________________________", stock_symbol)
-            db.session.add(Stock(stock_symbol=stock_symbol, company_name=company))
+            db.session.add(stock)
 
     db.session.commit()
 # def seed_stocks():
