@@ -5,14 +5,12 @@ def seed_stocks():
 
     with open(f'{os.path.dirname(__file__)}/stocks_list.csv', 'r') as csv_file:
         for row in csv_file.readlines()[1:]:
-            stock_symbol, company_name = row.split(',')[:2]
+            stock_symbol, company_name = row.split(',')
             company = company_name.strip()
-            if len(company) <= 255 or len(stock_symbol) <= 6:
-                stock = Stock(stock_symbol=stock_symbol, company_name=company)
+            stock = Stock(stock_symbol=stock_symbol, company_name=company)
             # print("SEEDS____________________________________________", stock_symbol)
-                db.session.add(stock)
-
-    db.session.commit()
+            db.session.add(stock)
+            db.session.commit()
 # def seed_stocks():
 #     stock1 = Stock(
 #         stock_symbol='TSLA')
