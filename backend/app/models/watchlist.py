@@ -1,5 +1,5 @@
 from sqlalchemy.orm import validates, relationship
-from sqlalchemy.types import Integer, String
+from sqlalchemy.types import Integer, String, BigInteger
 from .db import db, environment, watchlists_stocks, SCHEMA, add_prefix_for_prod
 from sqlalchemy.orm import declarative_mixin
 # from .user import User
@@ -18,7 +18,7 @@ class Watchlist(db.Model, TimestampMixin):
     if environment == "production":
         __table_args__ = {'schema': SCHEMA}
 
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.BigInteger, primary_key=True)
     owner_id = db.Column(db.Integer, db.ForeignKey((add_prefix_for_prod('users.id')), ondelete='CASCADE'), nullable=False)
     name = db.Column(db.String, nullable=False,)
     # stock_id = db.Column(db.Integer, db.ForeignKey((add_prefix_for_prod('stocks.id'))), nullable=False)
