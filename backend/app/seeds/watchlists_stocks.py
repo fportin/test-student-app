@@ -3,15 +3,15 @@ from app.models import db, environment, SCHEMA, User, Watchlist, Stock
 def seed_watchlists_stocks():
 
     stock1 = Stock.query.get(22)
-    stock2 = Stock.query.get(9685)
-    stock3 = Stock.query.get(416)
-    stock4 = Stock.query.get(475)
+    stock2 = Stock.query.get(333)
+    stock3 = Stock.query.get(111)
+    stock4 = Stock.query.get(222)
     stock5 = Stock.query.get(45)
-    stock6 = Stock.query.get(4154)
-    stock7 = Stock.query.get(2125)
-    stock8 = Stock.query.get(421)
-    stock9 = Stock.query.get(4148)
-    stock10 = Stock.query.get(4205)
+    stock6 = Stock.query.get(321)
+    stock7 = Stock.query.get(223)
+    stock8 = Stock.query.get(124)
+    stock9 = Stock.query.get(158)
+    stock10 = Stock.query.get(298)
 
     watchlist1 = Watchlist.query.get(1)
     watchlist2 = Watchlist.query.get(2)
